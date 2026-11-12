@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Um espaço de apoio para estudantes organizarem os estudos, compartilharem experiências e encontrarem respostas.">
+  <title>Conecta Estudante | Apoio para sua jornada</title>
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/script.js" defer></script>
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="#inicio" aria-label="Conecta Estudante - início">
+      <span class="brand-mark" aria-hidden="true">✦</span>
+      <span>Conecta<span class="brand-light">Estudante</span></span>
+    </a>
+    <nav class="main-nav" aria-label="Navegação principal">
+      <button class="nav-item" type="button" data-area="Rotina de estudos"><span class="nav-icon blue">▦</span><span>Rotina de<br>estudos</span></button>
+      <button class="nav-item" type="button" data-area="Caixa de desabafo"><span class="nav-icon yellow">♡</span><span>Caixa de<br>desabafo</span></button>
+      <a class="nav-item active" href="#perguntas"><span class="nav-icon teal">?</span><span>Perguntas<br>frequentes</span></a>
+      <button class="nav-item" type="button" data-area="Fórum"><span class="nav-icon pink">☷</span><span>Fórum</span></button>
+    </nav>
+    <button class="menu-toggle" id="menuToggle" aria-label="Abrir menu" aria-expanded="false">☰</button>
+  </header>
+
+  <main id="inicio" class="container">
+    <section class="welcome">
+      <p class="eyebrow">UM ESPAÇO FEITO PARA VOCÊ</p>
+      <h1>Você não precisa estudar sozinho.</h1>
+      <p class="welcome-text">Informação, acolhimento e apoio para tornar sua jornada de estudante mais leve.</p>
+    </section>
+
+    <section class="faq-section" id="perguntas" aria-labelledby="faqTitle">
+      <div class="section-heading">
+        <div><h2 id="faqTitle">Comece por aqui</h2><p>As perguntas mais frequentes dos estudantes.</p></div>
+        <div class="carousel-controls">
+          <button class="arrow-btn" id="prevFaq" aria-label="Perguntas anteriores">‹</button>
+          <button class="arrow-btn" id="nextFaq" aria-label="Próximas perguntas">›</button>
+        </div>
+      </div>
+      <div class="faq-window"><div class="faq-track" id="faqTrack">
+        <p class="loading-message">Carregando perguntas...</p>
+      </div></div>
+      <div class="carousel-dots" id="carouselDots" aria-label="Páginas das perguntas"></div>
+      <p class="api-status" id="apiStatus" role="status"></p>
+    </section>
+
+    <section class="encouragement">
+      <div class="encouragement-icon">✧</div>
+      <div><h2>Um passo de cada vez.</h2><p>Seu caminho é único. Respeite seu ritmo e lembre-se de que pedir ajuda também é uma forma de avançar.</p></div>
+    </section>
+    <footer class="footer"><span>© 2026 Conecta Estudante</span><span>Aprender também é cuidar de si.</span></footer>
+  </main>
+
+  <div class="modal-backdrop" id="answerModal" hidden>
+    <section class="answer-modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+      <button class="modal-close" id="closeModal" aria-label="Fechar">×</button>
+      <span class="card-category" id="modalCategory"></span>
+      <h2 id="modalTitle"></h2><p id="modalAnswer"></p>
+      <button class="primary-btn" id="modalOk">Entendi</button>
+    </section>
+  </div>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+</body>
+</html>
